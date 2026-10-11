@@ -10,7 +10,7 @@ This system monitors incoming customer inquiries, extracts structured complaint 
 
 High-volume support operations often suffer from long response latencies, inconsistent policy enforcement, and generic or hallucinated automated replies.
 
-This platform addresses these operational challenges through a two-stage multi-agent architecture:
+This platform addresses these operational challenges through a two-agent architecture with automated response and escalation:
 
 1. **Extraction Agent:** Parses unstructured email inquiries into clean, typed business parameters with issue categorization and priority classification.
 2. **Support Specialist Agent:** Queries an in-memory RAG vector store indexing company manuals, shipping rules, return procedures, and warranty terms before drafting context-aware email responses.
@@ -20,10 +20,10 @@ This platform addresses these operational challenges through a two-stage multi-a
 
 ## Key Capabilities
 
-- **Automated Gmail Ingestion:** Real-time polling trigger capturing unread customer support inquiries.
+- **Scheduled Gmail Ingestion:** Interval-based polling trigger (configured per minute) capturing unread customer support inquiries.
 - **Structured Intent & Priority Extraction:** Identifies order numbers, damaged items, return/refund intents, and assigns priority (Critical, High, Medium, Low).
 - **Retrieval-Augmented Generation (RAG):** Uses Gemini embeddings paired with an in-memory vector store to ground responses strictly in internal company guidelines.
-- **Zero-Hallucination Policy:** Agent prompts strictly restrict policy assertions to verified vector database chunks; unsupported claims are gracefully escalated to human staff.
+- **Grounded Responses and Safe Escalation:** Restricts policy assertions to retrieved vector chunks; requests outside knowledge base coverage are forwarded to human specialists.
 - **Threaded Customer Reply:** Directly responds to the original email ID via Gmail OAuth API to maintain message history.
 
 ---
@@ -144,7 +144,7 @@ Email samples, order IDs (e.g., `TG-78945`, `TG-45821`, `TG-908726`), customer n
 
 ## Security
 
-API credentials, Google Palm/Gemini API account keys, and OAuth access tokens are removed from the shared workflow configuration.
+Secret API keys, Google Palm tokens, and OAuth authorization tokens are kept securely within the n8n environment; only internal system references and non-sensitive workflow structures are included in the template export. 
 
 ---
 
