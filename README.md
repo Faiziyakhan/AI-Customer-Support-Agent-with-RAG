@@ -114,38 +114,26 @@ Every inbound email passes through a LangChain Structured Output Parser enforcin
 
 ## Evidence & Verified Visual Proof
 
-This repository includes authentic execution records, workflow canvas layouts, and verified customer email replies.
+This repository includes authentic execution records, workflow canvas layouts, and verified customer email replies:
 
 ### 1. Workflow Canvas & Execution Performance
+| Verified Successful Execution (ID#384 · 1.244s) | Full Workflow Architecture |
+| :---: | :---: |
+| ![Execution Run](Screenshot%202026-07-23%20152635.png) | ![Full Workflow Architecture](Screenshot%202026-09-06%20233634.png) |
 
-**Verified Successful Execution (ID#384 · 1.244s)**
-
-![Successful Execution](./screenshots/execution-success.png)
-
-**Full Workflow Canvas Architecture**
-
-![Workflow Canvas](./screenshots/workflow-canvas.png)
-
-### 2. Multi-Agent RAG Topology Detail
-
-**In-Memory Vector Store & Agent Connectivity**
-
-![RAG Topology](./screenshots/rag-topology.png)
+### 2. Live Workflow Topology & Connectivity
+| End-to-End Node Connections |
+| :---: |
+| ![Node Connections](Screenshot%202026-10-11%20230419.png) |
 
 ### 3. Live Customer Support Resolution Threads (Gmail Verification)
+| Shipping Status Inquiry & Policy SLA | Damaged Product Claim & Refund Resolution |
+| :---: | :---: |
+| ![Shipping Status Resolution](Screenshot%202026-07-23%20152001.png) | ![Damaged Product Resolution](Screenshot%202026-07-23%20152235.png) |
 
-**Damaged Product Claim & Policy Resolution**
-
-![Damaged Product Reply](./screenshots/gmail-damaged-product.png)
-
-**Shipping Status Inquiry & Policy SLA**
-
-![Shipping Inquiry Reply](./screenshots/gmail-shipping-inquiry.png)
-
-**Warranty Claim Inquiry & Customer Communication**
-
-![Warranty Claim Reply](./screenshots/gmail-warranty-claim.png)
-
+| Warranty Claim Inquiry & Policy Escalation |
+| :---: |
+| ![Warranty Claim Resolution](Screenshot%202026-07-23%20151622.png) |
 ---
 
 ## Data & Demo Notice
